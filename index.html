@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML4VIP</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <style type="text/css">
+        body {
+            margin: 40px auto;
+            max-width: 770px;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #424254;
+            padding: 0 10px;
+            background-color: #fff7ee;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
+            color: #8C0712;
+        }
+        
+        .header-frame {
+            margin: 0 0 30px 0;
+            padding: 0;
+            text-align: center;
+            height: 80px;
+            white-space: nowrap;
+        }
+        
+        .header-frame .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .header-frame img {
+            width: 80px;
+            height: 80px;
+            vertical-align: middle;
+            margin-right: 15px;
+            border-radius: 10px;
+        }
+        
+        .header-frame h1 {
+            color: #424254;
+            padding: 0;
+            margin: 0;
+            font-size: 60px;
+            line-height: 80px;
+            font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        h2 {
+            margin-bottom: 5px;
+        }
+        
+        p {
+            margin-top: 10px;
+        }
+        
+        aside {
+            text-align: center;
+            font-style: italic;
+        }
+        
+        a {
+            color: #64908A;
+            text-decoration: underline dotted;
+        }
+        
+        a:hover {
+            text-decoration: none
+        }
+        
+        a:visited {
+            color: #64908A;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        .img-wrapper {
+            width: 80%;
+            margin: 10px auto;
+        }
+        
+        .img-wrapper img {
+            max-width: 100%;
+            height: auto;
+            transition: transform .1s;
+        }
+        
+        .img-wrapper img:hover {
+            transform: scale(1.5);
+        }
+        
+        .img-wrapper .caption {
+            font-style: italic;
+        }
+        
+        hr {
+            color: #8C0712;
+            font-weight: 100;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-frame">
+            <span class="helper"></span><img src="img/logo.png" alt="UML4VIP logo">
+            <h1>UML4VIP</h1>
+        </div>
+        <aside>helping visually impaired people create UML class diagrams</aside>
+    </header>
+    <main>
+        <section>
+            <h2>About this project</h2>
+            <p>As part of a Bachelor's thesis we wanted to make UML class diagrams more accessible to visually impaired people. Over the course of several months and with the help of multiple blind software engineers we developed a prototype application
+                that offers unique advantages compared to more traditional methods. The application works with a 3D printed grid that is places part of the screen which helps navigate the various classes in a coordinate system.</p>
+        </section>
+        <hr>
+        <section>
+            <h2>The iOS App</h2>
+            <p>The iOS app is compatible with iOS 13 and higher and is available on all iPads. The application can be downloaded on the <a href="https://apple.com" target="_blank">App Store</a>.</p>
+            <p>In order to use the application to its full potential, we recommend that you connect an external keyboard to the device. The app has been designed to work well with the voiceover functionality of iOS.</p>
+            <div class="img-wrapper">
+                <img src="img/ios_screenshot.png" alt="screenshot of the application">
+                <span class="caption">The screenshot shows the general structure of the application</span>
+            </div>
+            <h3>Features</h3>
+            <p>While the app is not yet feature complete, a wide range of interactions are already available which make the app usable for real work:
+                <ul>
+                    <li>create new diagrams</li>
+                    <li>create, edit and delete:
+                        <ul>
+                            <li>classes and interfaces (up to 36 classes)</li>
+                            <li>fields and methods for classes</li>
+                            <li>relationships between two classes</li>
+                        </ul>
+                        <li>support for various levels of visibility (public, protected, private)</li>
+                        <li>easily read information, such as relationships, fields and methods</li>
+                        <li>multiple modes which allow for easier interactions</li>
+                        <li>move classes around the grid as you wish</li>
+                        <li>export the diagram either as an image (png) or as a .puml file (<a href="https://plantuml.com" target="_blank">PlantUML</a>)</li>
+                </ul>
+            </p>
+            <h3>3D printed Grid</h3>
+            <p>You need a 3D printed custom grid which fits on your iPad so you can use the application as intended. You can download the file for the 3D printed grid here:
+                <ul>
+                    <li><a href="grids/ipad_9.7.stl">9.7" iPad</a></li>
+                </ul>
+                These files have de datatype 'stl' which can be used to print with a variety of printers. More versions of the grid can be created on request.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Research & Paper</h2>
+            <p>The paper is available in the IEEE digital Library here:<br>
+                <a href="https://www.ieee.org/publications/xplore/index.html" target="_blank">Self-Directed Creation and Editing of UML Class Diagrams for Visually Impaired People on Mobile Devices</a>
+                <br><br> We presented our paper at the 28th IEEE International Requirements Engineering Conference in Zurich (<a href="https://re20.org" target="_blank">re20.org</a>) as part of the workshop "Model-Driven Requirements Engineering (MoDRE)"
+                (
+                <a href="http://www.modre2020.ece.mcgill.ca" target="_blank">modre2020.ece.mcgill.ca</a>).
+            </p>
+            <p>The Contributors to the paper are:
+                <ul>
+                    <li>Fabian Wildhaber</li>
+                    <li>Nadim Salloum</li>
+                    <li>Marcel Gygli</li>
+                    <li>Andrea Kennel</li>
+                </ul>
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Contributing</h2>
+            <p>There are still a lot of features missing from the application that would be welcome. We gladly accept the help of any contributors.<br>The application is written entirely in Swift and hosted on Github. If you would like help improve the application,
+                you can send us a message so that we can grant you access to the repository.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
