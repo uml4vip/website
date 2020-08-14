@@ -8,22 +8,47 @@
     <link rel="icon" type="image/png" href="img/logo.png">
 
     <style type="text/css">
+        @font-face {
+            font-family: "Alata";
+            src: url("fonts/Alata-Regular.ttf");
+        }
+        
+        @font-face {
+            font-family: "Montserrat";
+            src: url("fonts/Montserrat-Regular.ttf");
+        }
+        
         body {
             margin: 40px auto;
-            max-width: 770px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #424254;
+            max-width: 970px;
+            line-height: 1.8;
+            font-weight: 300;
+            font-size: 25px;
+            color: #fae0e2;
             padding: 0 10px;
-            background-color: #fff7ee;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #7d83d1;
+            font-family: Montserrat, Helvetica, sans-serif;
         }
         
         h1,
         h2,
         h3 {
             line-height: 1.2;
-            color: #8C0712;
+            color: #05061f;
+            font-family: Alata, Helvetica, Arial, sans-serif;
+        }
+        
+        h1 {
+            font-size: 70px;
+        }
+        
+        h2 {
+            font-size: 65px;
+        }
+        
+        h3 {
+            font-size: 55px;
+            margin-bottom: 15px;
         }
         
         .header-frame {
@@ -49,12 +74,10 @@
         }
         
         .header-frame h1 {
-            color: #424254;
             padding: 0;
             margin: 0;
-            font-size: 60px;
             line-height: 80px;
-            font-weight: 600;
+            font-weight: 300;
             display: inline-block;
             vertical-align: middle;
         }
@@ -73,8 +96,8 @@
         }
         
         a {
-            color: #64908A;
-            text-decoration: underline dotted;
+            color: #fae0e2;
+            text-decoration: underline;
         }
         
         a:hover {
@@ -82,11 +105,11 @@
         }
         
         a:visited {
-            color: #64908A;
+            color: #fae0e2;
         }
         
         section {
-            margin-bottom: 50px;
+            margin-bottom: 70px;
         }
         
         .img-wrapper {
@@ -97,11 +120,6 @@
         .img-wrapper img {
             max-width: 100%;
             height: auto;
-            transition: transform .1s;
-        }
-        
-        .img-wrapper img:hover {
-            transform: scale(1.5);
         }
         
         .img-wrapper .caption {
@@ -109,7 +127,7 @@
         }
         
         hr {
-            color: #8C0712;
+            color: #f0d0d2;
             font-weight: 100;
             border-top: none;
         }
@@ -130,7 +148,6 @@
             <p>As part of a Bachelor's thesis we wanted to make UML class diagrams more accessible to visually impaired people. Over the course of several months and with the help of multiple blind software engineers we developed a prototype application
                 that offers unique advantages compared to more traditional methods. The application works with a 3D printed grid that is places part of the screen which helps navigate the various classes in a coordinate system.</p>
         </section>
-        <hr>
         <section>
             <h2>The iOS App</h2>
             <p>The iOS app is compatible with iOS 13 and higher and is available on all iPads. The application can be downloaded on the <a href="https://apple.com" target="_blank">App Store</a>.</p>
@@ -164,7 +181,6 @@
                 These files have de datatype 'stl' which can be used to print with a variety of printers. More versions of the grid can be created on request.
             </p>
         </section>
-        <hr>
         <section>
             <h2>Research & Paper</h2>
             <p>The paper is available in the IEEE digital Library here:<br>
@@ -182,7 +198,6 @@
                 </ul>
             </p>
         </section>
-        <hr>
         <section>
             <h2>Contributing</h2>
             <p>There are still a lot of features missing from the application that would be welcome. We gladly accept the help of any contributors.<br>The application is written entirely in Swift and hosted on Github. If you would like help improve the application,
