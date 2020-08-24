@@ -19,22 +19,34 @@
         }
         
         body {
-            margin: 40px auto;
-            max-width: 970px;
             line-height: 1.8;
             font-weight: 300;
             font-size: 25px;
-            color: #fae0e2;
-            padding: 0 10px;
-            background-color: #7d83d1;
+            color: #05061f;
+            padding: 0;
+            margin: 0;
+            background-color: #f5f7ff;
             font-family: Montserrat, Helvetica, sans-serif;
+        }
+        
+        section {
+            max-width: 970px;
+            padding: 0 10px;
+            margin: 20px auto 50px;
+        }
+        
+        main {
+            margin-top: -12px;
+            position: relative;
+            z-index: 2;
         }
         
         h1,
         h2,
         h3 {
             line-height: 1.2;
-            color: #05061f;
+            color: #b95967;
+            ;
             font-family: Alata, Helvetica, Arial, sans-serif;
         }
         
@@ -51,10 +63,70 @@
             margin-bottom: 15px;
         }
         
+        a {
+            color: #b95967;
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            text-decoration: none
+        }
+        
+        a:visited {
+            color: #b95967;
+        }
+        
+        header {
+            height: 900px;
+            position: relative;
+            background-image: linear-gradient(to right top, #d16ba5, #e47595, #ef8588, #f2977f, #f0ab7d, #f4b778, #f5c373, #f2d171, #f6db60, #f6e64c, #f2f234, #eaff09);
+            transform: skewY(-9deg);
+            margin-top: -250px;
+        }
+        
+        header section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+        }
+        
+        header .buttons {
+            margin-top: 20px;
+        }
+        
+        header .buttons .btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.75rem 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: color 0.2s, background-color 0.2s;
+            text-decoration: none;
+        }
+        
+        header .buttons .btn+.btn {
+            margin-left: 15px;
+        }
+        
+        header .buttons .btn:hover {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        header .header-content {
+            transform: skewY(9deg);
+        }
+        
         .header-frame {
             margin: 0 0 30px 0;
             padding: 0;
-            height: 80px;
+            height: 90px;
             white-space: nowrap;
         }
         
@@ -65,8 +137,8 @@
         }
         
         .header-frame img {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             vertical-align: middle;
             margin-right: 15px;
             border-radius: 10px;
@@ -75,10 +147,11 @@
         .header-frame h1 {
             padding: 0;
             margin: 0;
-            line-height: 80px;
+            line-height: 90px;
             font-weight: 300;
             display: inline-block;
             vertical-align: middle;
+            font-size: 100px;
         }
         
         h2 {
@@ -91,23 +164,8 @@
         
         aside {
             font-style: italic;
-        }
-        
-        a {
-            color: #fae0e2;
-            text-decoration: underline;
-        }
-        
-        a:hover {
-            text-decoration: none
-        }
-        
-        a:visited {
-            color: #fae0e2;
-        }
-        
-        section {
-            margin-bottom: 70px;
+            color: #fdfdfd;
+            opacity: 0.9;
         }
         
         .img-wrapper {
@@ -123,16 +181,47 @@
         .img-wrapper .caption {
             font-style: italic;
         }
+        
+        @media only screen and (max-width: 598px) {
+            header .buttons .btn {
+                width: 100%;
+                margin: 10px 0;
+                box-sizing: border-box;
+            }
+            header .buttons .btn+.btn {
+                margin-left: 0;
+            }
+            header section {
+                top: 60%;
+            }
+            header .header-content {
+                padding: 20px;
+            }
+            .header-frame h1 {
+                font-size: 70px;
+                line-height: 70px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="header-frame">
-            <span class="helper"></span><img src="img/logo.png" alt="UML4VIP logo">
-            <h1>UML4VIP</h1>
-        </div>
-        <aside>helping visually impaired people create UML class diagrams</aside>
+        <section>
+            <div class="header-content">
+                <div class="header-frame">
+                    <span class="helper"></span><img src="img/logo.png" alt="UML4VIP logo">
+                    <h1>UML4VIP</h1>
+                </div>
+                <aside>helping visually impaired people create UML class diagrams</aside>
+                <div class="buttons">
+                    <a class="btn" href="https://github.com/UML4VIP/" target="_blank">View on GitHub</a>
+                    <a class="btn" href="#" target="_blank">Download App</a>
+                    <a class="btn" href="mailto:info@uml4.vip" target="_blank">Contact Us</a>
+                </div>
+            </div>
+
+        </section>
     </header>
     <main>
         <section>
@@ -193,7 +282,8 @@
         <section>
             <h2>Contributing</h2>
             <p>There are still a lot of features missing from the application that would be welcome. We gladly accept the help of any contributors.<br>The application is written entirely in Swift and hosted on Github. If you would like help improve the application,
-                you can send us a message so that we can grant you access to the repository.</p>
+                you can send us a message so that we can grant you access to the repository. The code is hosted on <a href="https://github.com/UML4VIP/" target="_blank">GitHub</a> in a private repository. You can send us a message to <a href="mailto:info@uml4.vip"
+                    target="_blank">info@uml4.vip</a>.</p>
         </section>
     </main>
 
